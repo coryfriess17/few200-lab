@@ -9,6 +9,7 @@ import { TipCalculatorComponent } from './components/tip-calculator/tip-calculat
 import { NavComponent } from './components/nav/nav.component';
 import { EntryComponent } from './components/todo-list/entry/entry.component';
 import { ListComponent } from './components/todo-list/list/list.component';
+import { TodoDataService } from './components/todo-list/todo-data.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ListComponent } from './components/todo-list/list/list.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TodoDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
