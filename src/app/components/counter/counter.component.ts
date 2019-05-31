@@ -37,6 +37,7 @@ export class CounterComponent implements OnInit {
   }
 
   setCountBy(what: number) {
-    this.store.dispatch(new counterActions.CountBySet(what));;
+    this.store.dispatch(new counterActions.CountBySet(what));
+    localStorage.setItem('counting-by', what.toString());
   }
 }
