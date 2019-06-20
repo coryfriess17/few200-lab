@@ -1,6 +1,8 @@
 import { Action } from '@ngrx/store';
 import { LibraryItemEntity } from '../reducers/list.reducer';
 
+let currentFakeId = 1;
+
 export const REMOVED_ITEM = '[library] removed item';
 export class ItemRemoved implements Action {
   readonly type = REMOVED_ITEM;
@@ -13,6 +15,7 @@ export class ItemAdded implements Action {
   payload: LibraryItemEntity;
   constructor(title: string, author: string, type: string) {
     this.payload = {
+      id: 'TEMP' + (currentFakeId++).toString(),
       title,
       author,
       type

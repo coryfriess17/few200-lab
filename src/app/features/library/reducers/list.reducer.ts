@@ -2,6 +2,7 @@
 import * as listActions from '../actions/list.actions';
 import { EntityState, createEntityAdapter } from '@ngrx/entity';
 export interface LibraryItemEntity {
+  id: string;
   title: string;
   author: string;
   type: string;
@@ -16,11 +17,13 @@ const initialState: State = {
   ids: ['1', '2'],
   entities: {
     1: {
+      id: '1',
       title: 'Harry Potter',
       author: 'J.K. Rowling',
       type: 'Hardcover'
     },
     2: {
+      id: '2',
       title: 'Lord of the Rings',
       author: 'J. R. R. Tolkien',
       type: 'E-Book'
